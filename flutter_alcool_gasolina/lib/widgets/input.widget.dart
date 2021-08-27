@@ -15,15 +15,14 @@ class Input extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 150,
+          width: 100,
           alignment: Alignment.centerRight,
           child: Text(
             label,
             style: TextStyle(
-              color: Colors.white,
-              fontSize: 26,
-              fontFamily: 'Big Shoulders Display',
-            ),
+                color: Colors.white,
+                fontSize: 26,
+                fontFamily: 'Big Shoulders Display'),
           ),
         ),
         SizedBox(
