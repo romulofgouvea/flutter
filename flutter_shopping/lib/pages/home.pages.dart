@@ -8,13 +8,16 @@ class Home extends StatelessWidget {
         title: Text('Shopping'),
       ),
       body: Container(
-        width: double.infinity,
+        height: double.infinity,
         color: Colors.red,
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Hello World 1'),
+            Container(
+              color: Colors.green,
+              child: Text('Hello World 1'),
+            ),
             Text('Hello World 2'),
             Text('Hello World 3'),
             Text('Hello World 4'),
