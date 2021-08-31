@@ -10,9 +10,8 @@ class Home extends StatelessWidget {
       body: Container(
         height: double.infinity,
         color: Colors.red,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
           children: [
             Container(
               color: Colors.green,
@@ -21,6 +20,10 @@ class Home extends StatelessWidget {
             Text('Hello World 2'),
             Text('Hello World 3'),
             Text('Hello World 4'),
+            Text('Hello World 5'),
+            Text('Hello World 6'),
+            Text('Hello World 7'),
+            Text('Hello World 8'),
           ],
         ),
       ),
