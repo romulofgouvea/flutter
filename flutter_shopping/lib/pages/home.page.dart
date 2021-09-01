@@ -150,7 +150,7 @@ Widget _productItem(BuildContext context) {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => ProductDetail(),
+          builder: (context) => ProductDetailPage(),
         ),
       );
     },
@@ -163,7 +163,7 @@ Widget _productItem(BuildContext context) {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
-              "assets/Icon_Devices.png",
+              "assets/product-2.png",
               width: 170,
               height: 170,
               fit: BoxFit.cover,
