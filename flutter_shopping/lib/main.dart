@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shopping/pages/home.pages.dart';
+import 'package:flutter_shopping/pages/login.page.dart';
 
 void main() {
   runApp(Main());
@@ -16,7 +16,7 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
+      home: Login(),
     );
   }
 }
