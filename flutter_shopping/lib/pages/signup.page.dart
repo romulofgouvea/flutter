@@ -111,7 +111,7 @@ class Signup extends StatelessWidget {
                         ),
                         child: TextButton(
                           child: Text(
-                            "Signup",
+                            "REGISTRAR",
                             style: TextStyle(
                               color: Colors.white,
                             ),

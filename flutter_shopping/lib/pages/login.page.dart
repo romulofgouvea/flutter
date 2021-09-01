@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shopping/pages/home.page.dart';
 import 'package:flutter_shopping/pages/signup.page.dart';
 
 class Login extends StatelessWidget {
@@ -57,7 +58,7 @@ class Login extends StatelessWidget {
                               );
                             },
                             child: Text(
-                              "Registrar",
+                              "REGISTRAR",
                               style: TextStyle(
                                 color: Theme.of(context).accentColor,
                               ),
@@ -130,12 +131,19 @@ class Login extends StatelessWidget {
                         ),
                         child: TextButton(
                           child: Text(
-                            "Entrar",
+                            "ENTRAR",
                             style: TextStyle(
                               color: Colors.white,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Home(),
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ],
