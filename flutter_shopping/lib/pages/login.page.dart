@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shopping/pages/signup.page.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -47,9 +48,16 @@ class Login extends StatelessWidget {
                             ],
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Signup(),
+                                ),
+                              );
+                            },
                             child: Text(
-                              "Entrar",
+                              "Registrar",
                               style: TextStyle(
                                 color: Theme.of(context).accentColor,
                               ),
