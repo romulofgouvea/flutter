@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +10,7 @@ class Login extends StatelessWidget {
         height: double.infinity,
         color: Colors.red,
         child: Center(
-          child: Text("Login"),
+          child: Text("ProductDetail"),
         ),
       ),
     );
