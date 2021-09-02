@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shopping/pages/home.page.dart';
 import 'package:flutter_shopping/pages/signup.page.dart';
 
-class Login extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -136,14 +135,7 @@ class Login extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Home(),
-                              ),
-                            );
-                          },
+                          onPressed: () {},
                         ),
                       ),
                     ],
