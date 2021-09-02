@@ -11,8 +11,8 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "Flutter SHopping",
       debugShowCheckedModeBanner: false,
-      color: Colors.white,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
