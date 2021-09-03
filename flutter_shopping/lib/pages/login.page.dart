@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shopping/pages/signup.page.dart';
 
 class LoginPage extends StatelessWidget {
+  final _formKey = GlobalKey<FormState>();
+  String _email = "";
+  String _password = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,114 +34,143 @@ class LoginPage extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: EdgeInsets.all(24),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Bem Vindo,",
-                                  style: TextStyle(
-                                    fontSize: 32,
-                                    fontWeight: FontWeight.bold,
-                                  )),
-                              Text("Entre e continue"),
-                            ],
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Signup(),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Bem Vindo,",
+                                    style: TextStyle(
+                                      fontSize: 32,
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                                Text("Entre e continue"),
+                              ],
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Signup(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                "REGISTRAR",
+                                style: TextStyle(
+                                  color: Theme.of(context).primaryColor,
                                 ),
-                              );
-                            },
+                              ),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        TextFormField(
+                          // autofocus: true,
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            labelText: "Email",
+                            labelStyle: TextStyle(
+                              color: Theme.of(context).accentColor,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 16,
+                            ),
+                          ),
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Theme.of(context).accentColor,
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Email inválido';
+                            }
+                            return null;
+                          },
+                          onSaved: (input) => _email = input!,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextFormField(
+                          // autofocus: true,
+                          keyboardType: TextInputType.text,
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            labelText: "Password",
+                            labelStyle: TextStyle(
+                              color: Theme.of(context).accentColor,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 16,
+                            ),
+                          ),
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Theme.of(context).accentColor,
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Senha inválida';
+                            }
+                            return null;
+                          },
+                          onSaved: (input) => _password = input!,
+                        ),
+                        Container(
+                          height: 40,
+                          alignment: Alignment.centerRight,
+                          child: TextButton(
                             child: Text(
-                              "REGISTRAR",
+                              "Esqueceu sua senha?",
                               style: TextStyle(
                                 color: Theme.of(context).primaryColor,
                               ),
                             ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        // autofocus: true,
-                        keyboardType: TextInputType.emailAddress,
-                        decoration: InputDecoration(
-                          labelText: "Email",
-                          labelStyle: TextStyle(
-                            color: Theme.of(context).accentColor,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            onPressed: () {},
                           ),
                         ),
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Theme.of(context).accentColor,
+                        SizedBox(
+                          height: 10,
                         ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextFormField(
-                        // autofocus: true,
-                        keyboardType: TextInputType.text,
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          labelText: "Password",
-                          labelStyle: TextStyle(
-                            color: Theme.of(context).accentColor,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16,
-                          ),
-                        ),
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Theme.of(context).accentColor,
-                        ),
-                      ),
-                      Container(
-                        height: 40,
-                        alignment: Alignment.centerRight,
-                        child: TextButton(
-                          child: Text(
-                            "Esqueceu sua senha?",
-                            style: TextStyle(
-                              color: Theme.of(context).primaryColor,
+                        Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).primaryColor,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5),
                             ),
                           ),
-                          onPressed: () {},
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(5),
-                          ),
-                        ),
-                        child: TextButton(
-                          child: Text(
-                            "ENTRAR",
-                            style: TextStyle(
-                              color: Colors.white,
+                          child: TextButton(
+                            child: Text(
+                              "ENTRAR",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
                             ),
+                            onPressed: () {
+                              if (_formKey.currentState!.validate()) {
+                                _formKey.currentState!.save();
+                                print(_email);
+                                print(_password);
+
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('Bem vindo, $_email'),
+                                  ),
+                                );
+                              }
+                            },
                           ),
-                          onPressed: () {},
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
