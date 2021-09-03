@@ -8,7 +8,6 @@ class LoginPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
-          color: Colors.grey[100],
           padding: EdgeInsets.only(
             left: 16,
             right: 16,
@@ -59,7 +58,7 @@ class LoginPage extends StatelessWidget {
                             child: Text(
                               "REGISTRAR",
                               style: TextStyle(
-                                color: Theme.of(context).accentColor,
+                                color: Theme.of(context).primaryColor,
                               ),
                             ),
                           )
@@ -74,14 +73,14 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: "Email",
                           labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).accentColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
                         ),
                         style: TextStyle(
                           fontSize: 20,
-                          color: Theme.of(context).primaryColor,
+                          color: Theme.of(context).accentColor,
                         ),
                       ),
                       SizedBox(
@@ -94,14 +93,14 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: "Password",
                           labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).accentColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
                         ),
                         style: TextStyle(
                           fontSize: 20,
-                          color: Theme.of(context).primaryColor,
+                          color: Theme.of(context).accentColor,
                         ),
                       ),
                       Container(
@@ -158,7 +157,7 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).accentColor,
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
@@ -174,7 +173,12 @@ class LoginPage extends StatelessWidget {
                           "assets/facebook.png",
                         ),
                       ),
-                      Text("Entrar com Facebook"),
+                      Text(
+                        "Entrar com Facebook",
+                        style: TextStyle(
+                          color: Theme.of(context).accentColor,
+                        ),
+                      ),
                     ],
                   ),
                   onPressed: () {},
@@ -189,7 +193,7 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).accentColor,
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
@@ -205,7 +209,12 @@ class LoginPage extends StatelessWidget {
                           "assets/google.png",
                         ),
                       ),
-                      Text("Entrar com Google"),
+                      Text(
+                        "Entrar com Google",
+                        style: TextStyle(
+                          color: Theme.of(context).accentColor,
+                        ),
+                      ),
                     ],
                   ),
                   onPressed: () {},

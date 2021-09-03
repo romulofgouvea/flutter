@@ -13,8 +13,18 @@ class CartPage extends StatelessWidget {
             ),
           ),
           Container(
-            color: Colors.black12,
             height: 80,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                new BoxShadow(
+                  color: Colors.black12,
+                  offset: new Offset(1, 2.0),
+                  blurRadius: 5,
+                  spreadRadius: 1,
+                ),
+              ],
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -135,7 +145,12 @@ Widget productItem(context) {
                       width: 40,
                       alignment: Alignment.center,
                       child: TextButton(
-                        child: Text("+"),
+                        child: Text(
+                          "+",
+                          style: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
                         onPressed: () => {},
                       ),
                     ),
@@ -148,7 +163,12 @@ Widget productItem(context) {
                       width: 40,
                       alignment: Alignment.center,
                       child: TextButton(
-                        child: Text("-"),
+                        child: Text(
+                          "-",
+                          style: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
                         onPressed: () => {},
                       ),
                     ),

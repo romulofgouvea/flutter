@@ -9,7 +9,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.grey[100],
           padding: EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -21,7 +20,10 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 24,
               ),
-              Text("Categorias"),
+              Text(
+                "Categorias",
+                style: Theme.of(context).textTheme.headline5,
+              ),
               SizedBox(
                 height: 24,
               ),
@@ -32,7 +34,10 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 24,
               ),
-              Text("Mais vendidos"),
+              Text(
+                "Mais vendidos",
+                style: Theme.of(context).textTheme.headline5,
+              ),
               Container(
                 height: 350,
                 child: ProductList(scrollDirection: Axis.horizontal),

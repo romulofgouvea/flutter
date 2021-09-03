@@ -11,7 +11,6 @@ class Signup extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
-          color: Colors.grey[100],
           padding: EdgeInsets.only(
             left: 16,
             right: 16,
@@ -38,7 +37,7 @@ class Signup extends StatelessWidget {
                     children: [
                       Text(
                         "Registrar",
-                        style: Theme.of(context).textTheme.display2,
+                        style: Theme.of(context).textTheme.headline3,
                       ),
                       SizedBox(
                         height: 30,
@@ -49,14 +48,14 @@ class Signup extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: "Nome",
                           labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).accentColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
                         ),
                         style: TextStyle(
                           fontSize: 20,
-                          color: Theme.of(context).primaryColor,
+                          color: Theme.of(context).accentColor,
                         ),
                       ),
                       SizedBox(
@@ -68,14 +67,14 @@ class Signup extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: "Email",
                           labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).accentColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
                         ),
                         style: TextStyle(
                           fontSize: 20,
-                          color: Theme.of(context).primaryColor,
+                          color: Theme.of(context).accentColor,
                         ),
                       ),
                       SizedBox(
@@ -88,14 +87,14 @@ class Signup extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: "Senha",
                           labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).accentColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
                         ),
                         style: TextStyle(
                           fontSize: 20,
-                          color: Theme.of(context).primaryColor,
+                          color: Theme.of(context).accentColor,
                         ),
                       ),
                       SizedBox(

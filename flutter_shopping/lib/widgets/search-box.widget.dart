@@ -43,10 +43,10 @@ class _SearchBoxState extends State<SearchBox>
             menuOpened = !menuOpened;
           },
           child: AnimatedIcon(
-            icon: AnimatedIcons.menu_close,
-            progress: _controller,
-            semanticLabel: 'Abrir Menu',
-          ),
+              icon: AnimatedIcons.menu_close,
+              progress: _controller,
+              semanticLabel: 'Abrir Menu',
+              color: Theme.of(context).primaryColor),
         ),
       ],
     );

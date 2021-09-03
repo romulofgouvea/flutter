@@ -92,7 +92,7 @@ class AnimatedInput extends StatelessWidget {
                 ),
                 style: TextStyle(
                   fontSize: 20,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).accentColor,
                 ),
               ),
             ),

@@ -20,7 +20,7 @@ class ProductCard extends StatelessWidget {
       padding: EdgeInsets.all(10),
       margin: EdgeInsets.all(5),
       width: 170,
-      color: Colors.black12,
+      color: Theme.of(context).accentColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
