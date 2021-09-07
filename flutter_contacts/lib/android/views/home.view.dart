@@ -45,7 +45,7 @@ class HomeView extends StatelessWidget {
                 );
               },
               child: Icon(
-                Icons.chat,
+                Icons.keyboard_arrow_right,
                 color: Theme.of(context).primaryColor,
               ),
             ),
