@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kiosk/android/widgets/cards-table.widget.dart';
 import 'package:flutter_kiosk/android/widgets/search-box.widget.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,7 +16,6 @@ class HomeView extends StatelessWidget {
             SizedBox(
               height: 24,
             ),
-            CardsTable(),
           ],
         ),
       ),
