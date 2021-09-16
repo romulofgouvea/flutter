@@ -9,8 +9,8 @@ class HomeBloc extends ChangeNotifier {
   final categoryRepository = new CategoryRepository();
   final productRepository = new ProductRepository();
 
-  late List<ProductListItemModel>? products;
-  late List<CategoryListItemModel> categories;
+  List<ProductListItemModel>? products = <ProductListItemModel>[];
+  List<CategoryListItemModel> categories = <CategoryListItemModel>[];
   String selectedCategory = 'todos';
 
   HomeBloc() {

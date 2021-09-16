@@ -4,9 +4,9 @@ import 'package:flutter_shopping_v2/ui/shared/widgets/category/category-card.wid
 import 'package:flutter_shopping_v2/ui/shared/widgets/shared/loader.widget.dart';
 
 class CategoryList extends StatelessWidget {
-  final List<CategoryListItemModel> categories;
+  final List<CategoryListItemModel>? categories;
 
-  CategoryList({required this.categories});
+  CategoryList({this.categories});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,9 @@ class CategoryList extends StatelessWidget {
   Widget list() {
     return ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
+        itemCount: categories!.length,
         itemBuilder: (context, index) {
-          CategoryListItemModel category = categories[index];
+          CategoryListItemModel category = categories![index];
 
           return Padding(
             padding: EdgeInsets.only(right: 8),
