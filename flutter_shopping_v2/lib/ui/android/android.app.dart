@@ -19,8 +19,6 @@ class AndroidApp extends StatelessWidget {
 class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final HomeBloc bloc = Provider.of<HomeBloc>(context);
-
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Shopping v2',

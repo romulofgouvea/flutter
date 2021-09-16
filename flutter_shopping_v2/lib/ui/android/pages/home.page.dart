@@ -11,11 +11,22 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.only(right: 0, left: 0, top: 24, bottom: 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            SizedBox(
+              height: 16,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: Text('Categorias',
+                  style: Theme.of(context).textTheme.headline5),
+            ),
             CategoryList(categories: bloc.categories),
+            SizedBox(
+              height: 16,
+            ),
           ],
         ),
       ),

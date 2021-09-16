@@ -11,7 +11,7 @@ class CategoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 90,
+        height: 85,
         child: Loader(
           object: categories,
           callback: list,
@@ -26,7 +26,7 @@ class CategoryList extends StatelessWidget {
           CategoryListItemModel category = categories[index];
 
           return Padding(
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.only(right: 8),
             child: CategoryCard(
               item: category,
             ),
