@@ -18,7 +18,6 @@ class CategoryCard extends StatelessWidget {
     return Container(
       width: 70,
       height: 70,
-      margin: EdgeInsets.all(8),
       padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: item.tag == bloc.selectedCategory

@@ -11,7 +11,7 @@ class CategoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 85,
+        height: 70,
         child: Loader(
           object: categories,
           callback: list,
